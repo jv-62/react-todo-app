@@ -28,7 +28,7 @@ const App = () => {
 
   const addTodo = (e) => {
     e.preventDefault();
-    if (todo !== '') {
+    if (todo !== "") {
       if(isEdit){
         const newTodoItems = [...todos];
         newTodoItems.forEach((element, index) => {
