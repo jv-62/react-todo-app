@@ -125,3 +125,40 @@ li:last-child {
   padding: 0.3em;
   height: 51px;
 }
+@media only screen and (max-width: 600px) {
+  body{
+    padding: 20px;
+  }
+  h1{
+    font-size: 1rem;
+  }
+  .App {
+    max-width: 100%;
+  }
+  .input-wrapper{
+    margin: 0;
+  }
+  input{
+    width: 60%;
+  }
+  div.todo button{
+    padding: 0.5em;
+  }
+  .filter-wrapper{
+    margin: 20px 0 0 0;
+    display: block;
+  }
+  div.filter-wrapper select, div.filter-wrapper button{
+    margin-top: 20px;
+  }
+  div.filter-wrapper select{
+    width: 33%;
+  }
+  li{
+    font-size: small;
+  }
+  .clear-button{
+    height: 52px;
+    border-left: none;
+  }
+}
