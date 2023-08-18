@@ -14,7 +14,7 @@ const App = () => {
   const filterTodos = useMemo(() => {
     return todos.filter((elem) => {
       if(searchTerm){
-        return elem.name.includes(searchTerm)
+        return elem.name.toLowerCase().includes(searchTerm.toLowerCase())
       }else if(filter !== "All"){
         if(filter === "Uncompleted"){
           return elem.completed === false;
