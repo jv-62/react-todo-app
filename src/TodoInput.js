@@ -1,19 +1,21 @@
-const TodoInput = ({todo, setTodo, addTodo, isEdit}) => {
-    return (
-        <div className="input-wrapper">
-            <form>
-                <input
-                    type="text"
-                    name="todo"
-                    value={todo}
-                    placeholder="Create a new todo"
-                    onChange={(e) => {
-                        setTodo(e.target.value);
-                    }}
-                />
-                <button className="add-button" onClick={addTodo}>{isEdit?'Update':'Submit'}</button>
-            </form>
-        </div>
-    )
-}
+const TodoInput = ({ todo, setInput, addTodo, isEdit }) => {
+	return (
+		<div className='input-wrapper'>
+			<form onSubmit={addTodo}>
+				<input
+					type='text'
+					name='todo'
+					value={todo}
+					placeholder='✏️ Add a new task...'
+					onChange={e => {
+						setInput(e.target.value);
+					}}
+				/>
+				<button type='submit' className='add-button'>
+					{isEdit ? '✓ Update' : '+ Add'}
+				</button>
+			</form>
+		</div>
+	);
+};
 export default TodoInput;
